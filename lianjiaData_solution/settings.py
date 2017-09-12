@@ -21,6 +21,28 @@ USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) ' \
              'AppleWebKit/537.36 (KHTML, like Gecko) ' \
              'Chrome/49.0.2623.87 Safari/537.36'
 
+PAGE_HEADERS = {
+	"Connection":"keep-alive",
+	"Content-Encoding":"gzip",
+	"Content-Language":"en-US",
+	"Content-Type":"text/html;charset=UTF-8",
+	"Server":"Tengine",
+	"Transfer-Encoding":"chunked",
+	"Vary":"Accept-Encoding"
+}
+
+
+THREAD_HEADERS = {
+	"Accept":t"ext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+	"Accept-Encoding":"gzip, deflate",
+	"Accept-Language:en-US,zh-CN";"q=0.8,zh;q=0.6,en;q=0.4",
+	"Cache-Control":"max-age=0"
+	"Connection":"keep-alive",
+	"Host":"sh.lianjia.com",
+	"Upgrade-Insecure-Requests":"1",
+	"User-Agent":USER_AGENT
+}
+
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -107,15 +129,7 @@ SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
 # 项目路径
 PROJECT_DIR = os.path.dirname(os.path.abspath(os.path.curdir))
 
-# mongodb配置
-MONGO_URI = 'mongodb://localhost:27017'
-
 # pipeline设置
 ITEM_PIPELINES = {
     'zhihu.pipelines.ZhihuPipeline': 500,
 }
-
-# 异步任务队列
-BROKER_URL = 'amqp://guest:guest@localhost:5672//'
-
-

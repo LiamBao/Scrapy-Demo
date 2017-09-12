@@ -14,5 +14,18 @@ class LianjiadataSolutionItem(scrapy.Item):
     #pass
     """
     定义字段属性参数
-    """
-    
+    """ 
+    title=Item.Field()
+    address=Item.Field()
+    location=Item.Field()
+    avenue=Item.Field()
+    rent=Item.Field()
+    floor=Item.Field()
+    area=Item.Field()
+    housing_units=Item.Field()
+    info=Item.Field()
+    result_kanfang=Item.Field()
+    added_time=Item.Field()
+    fang_subway_ex=Item.Field()
+    img_url=Item.Field()
+    crawl_time=Item.Field()

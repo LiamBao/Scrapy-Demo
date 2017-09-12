@@ -1,7 +1,7 @@
 #-*- coding=utf8-*-
 
 import jieba
-#import 
+import wordcloud
 
 
 Image():
