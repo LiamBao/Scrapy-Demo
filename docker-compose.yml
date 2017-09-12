@@ -1,0 +1,19 @@
+version: '2'
+services:
+  spiderenv:
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile-python
+    command: ./run_spider.sh
+    volumes:
+      - .:/src/app
+    ports:
+      - "8801:8801"
+    links:
+      - redis
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"

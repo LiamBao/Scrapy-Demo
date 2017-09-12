@@ -1,0 +1,6 @@
+Scrapy
+requests
+celery
+jieba
+WordCloud
+NumPy
