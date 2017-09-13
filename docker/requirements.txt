@@ -2,5 +2,5 @@ Scrapy
 requests
 celery
 jieba
-WorldCloud
+WordCloud
 NumPy

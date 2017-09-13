@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf8 -*-
 
 # Define here the models for your scraped items
 #
@@ -15,17 +15,18 @@ class LianjiadataSolutionItem(scrapy.Item):
     """
     定义字段属性参数
     """ 
-    title=Item.Field()
-    address=Item.Field()
-    location=Item.Field()
-    avenue=Item.Field()
-    rent=Item.Field()
-    floor=Item.Field()
-    area=Item.Field()
-    housing_units=Item.Field()
-    info=Item.Field()
-    result_kanfang=Item.Field()
-    added_time=Item.Field()
-    fang_subway_ex=Item.Field()
-    img_url=Item.Field()
-    crawl_time=Item.Field()
+    title=scrapy.Field()
+    address=scrapy.Field()
+    location=scrapy.Field()
+    avenue=scrapy.Field()
+    rent=scrapy.Field()
+    floor=scrapy.Field()
+    house_orientation=scrapy.Field()
+    area=scrapy.Field()
+    housing_units=scrapy.Field()
+    info=scrapy.Field()
+    result_kanfang=scrapy.Field()
+    added_time=scrapy.Field()
+    fang_subway_ex=scrapy.Field()
+    img_url=scrapy.Field()
+    crawl_time=scrapy.Field()
