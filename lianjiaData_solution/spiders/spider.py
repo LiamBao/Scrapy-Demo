@@ -36,7 +36,7 @@ class LianjiaSpider(CrawlSpider):
             yield Request(page_url,
                     method='GET',
                     headers=settings.PAGE_HEADERS,
-                    meta={'handle_httpstatus_list': [301, 302]},
+                    meta={'cookiejar': response.meta['cookiejar'], 'handle_httpstatus_list': [301, 302]},
                     callback=self.thread_url,
                     errback=self.parse_err
                     )
@@ -92,7 +92,7 @@ class LianjiaSpider(CrawlSpider):
             '//table[@class="aroundInfo"]/tr[2]/td[2]//text()'
         ).extract_first()
 
-        #小区 avenue
+        #小区
         avenue=selector.xpath(
             './/p[@class="addrEllipsis"]/@title'
         ).extract_first()

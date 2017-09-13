@@ -1,18 +1,21 @@
 #-*- coding=utf8-*-
 
 import jieba
-import wordcloud
+import WordCloud
+import matplotlib.pyplot as plt
+import numpy as np
 
 
-Image():
+
+class Image():
     data = []
-    jieba.analyse.set_stop_words("./stopwords.txt")
+    jieba.analyse.set_stop_words("./stop.txt")
 
-    with codecs.open("weibo1.txt", 'r', encoding="utf-8") as f:
+    with codecs.open("lianjiaData.csv", 'r', encoding="utf-8") as f:
         for text in f.readlines():
             data.extend(jieba.analyse.extract_tags(text, topK=20))
         data = " ".join(data)
-        mask_img = imread('./52f90c9a5131c.jpg', flatten=True)
+        mask_img = imread('./lianjiaImg.jpg', flatten=True)
         wordcloud = WordCloud(
             font_path='msyh.ttc',
             background_color='white',
